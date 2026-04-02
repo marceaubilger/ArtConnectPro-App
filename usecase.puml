@@ -1,0 +1,61 @@
+@startuml
+left to right direction
+
+actor User
+actor Admin
+
+rectangle "Art Gallery Application" {
+
+  ' --- General viewing features (User + Admin) ---
+  User --> (View Main Screen)
+  User --> (Browse Artists)
+  User --> (Search & Filter Artists)
+  User --> (View Artworks)
+  User --> (View Galleries)
+  User --> (View Exhibitions)
+  User --> (View Workshops)
+  User --> (View Community Info)
+
+  Admin --> (View Main Screen)
+  Admin --> (Browse Artists)
+  Admin --> (Search & Filter Artists)
+  Admin --> (View Artworks)
+  Admin --> (View Galleries)
+  Admin --> (View Exhibitions)
+  Admin --> (View Workshops)
+  Admin --> (View Community Info)
+
+  ' --- Admin-only features ---
+  Admin --> (Manage Artists)
+  Admin --> (Manage Artworks)
+  Admin --> (Manage Galleries)
+  Admin --> (Manage Exhibitions)
+  Admin --> (Manage Workshops)
+  Admin --> (Manage Users)
+
+  (Manage Artists) --> (Add Artist)
+  (Manage Artists) --> (Edit Artist)
+  (Manage Artists) --> (Delete Artist)
+
+  (Manage Artworks) --> (Add Artwork)
+  (Manage Artworks) --> (Edit Artwork)
+  (Manage Artworks) --> (Delete Artwork)
+
+  (Manage Galleries) --> (Add Gallery)
+  (Manage Galleries) --> (Edit Gallery)
+  (Manage Galleries) --> (Delete Gallery)
+
+  (Manage Exhibitions) --> (Add Exhibition)
+  (Manage Exhibitions) --> (Edit Exhibition)
+  (Manage Exhibitions) --> (Delete Exhibition)
+
+  (Manage Workshops) --> (Add Workshop)
+  (Manage Workshops) --> (Edit Workshop)
+  (Manage Workshops) --> (Delete Workshop)
+
+  (Manage Users) --> (Add User)
+  (Manage Users) --> (Edit User)
+  (Manage Users) --> (Delete User)
+}
+
+@enduml
