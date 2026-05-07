@@ -5,7 +5,6 @@ import com.project.artconnect.model.Artwork;
 import com.project.artconnect.service.impl.InMemoryArtistService;
 import com.project.artconnect.service.impl.InMemoryArtworkService;
 import java.util.List;
-import java.util.Optional;
 
 public class ArtworksDaoImpl implements ArtworkDao {
     private final InMemoryArtworkService service = new InMemoryArtworkService();
