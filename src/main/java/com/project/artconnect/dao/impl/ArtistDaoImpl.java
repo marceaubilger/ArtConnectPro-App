@@ -2,7 +2,7 @@ package com.project.artconnect.dao.impl;
 
 import com.project.artconnect.dao;
 
-public class ArtistDao implements ArtistDao {
+public class ArtistDaoImpl implements ArtistDao {
     List<Artist> findAll() {
 
     }
