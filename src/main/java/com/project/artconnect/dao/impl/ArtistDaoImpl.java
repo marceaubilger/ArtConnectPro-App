@@ -1,19 +1,31 @@
 package com.project.artconnect.dao.impl;
 
-import com.project.artconnect.dao;
+import com.project.artconnect.dao.ArtistDao;
+import com.project.artconnect.service.impl.InMemoryArtistService;
+import com.project.artconnect.model.Artist;
+
+import java.util.List;
 
 public class ArtistDaoImpl implements ArtistDao {
-    List<Artist> findAll() {
+    private final InMemoryArtistService service = new InMemoryArtistService();
 
+    public List<Artist> findAll() {
+        return  service.getAllArtists();
     }
 
-    void save(Artist artist) {
-
+    public void save(Artist artist) {
+        service.createArtist(artist);
     }
 
-    void update(Artist artist) {}
+    public void update(Artist artist) {
+        service.updateArtist(artist);
+    }
 
-    void delete(String artistName) {}
+    public void delete(String artistName) {
+        service.deleteArtist(artistName);
+    }
 
-    List<Artist> findByCity(String city) {}
+    public List<Artist> findByCity(String city) {
+        return service.searchArtists(null, null, city);
+    }
 }
