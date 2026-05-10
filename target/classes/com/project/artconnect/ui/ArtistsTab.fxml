@@ -13,6 +13,9 @@
         <ComboBox fx:id="disciplineFilter" promptText="Filter by Discipline" />
         <Button text="Search" onAction="#handleSearch" />
         <Button text="Reset" onAction="#handleReset" />
+        <Button text="Add" onAction="#handleAdd" />
+        <Button text="Modify" onAction="#handleModify" />
+        <Button text="Delete" onAction="#handleDelete" />
     </HBox>
     <TableView fx:id="artistTable" VBox.vgrow="ALWAYS">
         <columns>
