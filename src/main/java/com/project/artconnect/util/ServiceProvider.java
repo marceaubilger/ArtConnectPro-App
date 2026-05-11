@@ -12,12 +12,14 @@ public class ServiceProvider {
     private static final JdbcArtistDao artistDao = new JdbcArtistDao();
     private static final JdbcArtworkDao artworkDao = new JdbcArtworkDao();
     private static final JdbcGalleryDao galleryDao = new JdbcGalleryDao();
+    private static final JdbcExhibitionDao exhibitionDao = new JdbcExhibitionDao();
     private static final JdbcWorkshopDao workshopDao = new JdbcWorkshopDao();
     private static final JdbcCommunityMemberDao communityMemberDao = new JdbcCommunityMemberDao();
 
     private static final ArtistService artistService = new JdbcArtistService(artistDao);
     private static final ArtworkService artworkService = new JdbcArtworkService(artworkDao, artistDao);
     private static final GalleryService galleryService = new JdbcGalleryService(galleryDao);
+    private static final ExhibitionService exhibitionService = new JdbcExhibitionService(exhibitionDao);
     private static final WorkshopService workshopService = new JdbcWorkshopService(workshopDao);
     private static final CommunityService communityService = new JdbcCommunityService(communityMemberDao);
 
@@ -32,6 +34,8 @@ public class ServiceProvider {
     public static GalleryService getGalleryService() {
         return galleryService;
     }
+
+    public static ExhibitionService getExhibitionService() {return exhibitionService; }
 
     public static WorkshopService getWorkshopService() {
         return workshopService;
