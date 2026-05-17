@@ -20,6 +20,8 @@ import java.util.Optional;
  */
 public class JdbcWorkshopDao implements WorkshopDao {
 
+
+
     @Override
     public Optional<Workshop> findByTitle(String title) {
         String sql = "SELECT title, date, duration_minutes, max_participants, price, instructor_name, location, description, level FROM workshop WHERE title = ?";

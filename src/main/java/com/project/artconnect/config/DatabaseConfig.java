@@ -9,7 +9,7 @@ public final class DatabaseConfig {
     private static final String DEFAULT_URL =
             "jdbc:mysql://localhost:3306/artconnect_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
     private static final String DEFAULT_USER = "root";
-    private static final String DEFAULT_PASSWORD = "1234";
+    private static final String DEFAULT_PASSWORD = "password.";
 
     public static final String URL = System.getProperty(
             "artconnect.db.url",

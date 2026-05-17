@@ -23,7 +23,15 @@ Requirement: Java 17+ and Maven installed.
 ```bash
 mvn clean javafx:run
 ```
-
+## To run the terminal output
+setup of the queries (to run once)
+```bash
+mysql -u root -p artconnect_db < db_objects.sql
+```
+lauching the terminal interface
+```bash
+mvn compile exec:java -Dexec.mainClass="com.project.artconnect.cli.DatabaseCLI"
+```
 The application runs "out-of-the-box" using **In-Memory Services** (`InMemoryArtistService`, etc.) located in `com.project.artconnect.service.impl`. This allows immediate demonstration of the UI with dummy data.
 
 ## OOP-First Design (Object-Oriented Programming)
